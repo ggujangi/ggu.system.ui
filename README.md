@@ -1,11 +1,12 @@
-# Control the System UI Visibility:penguin:
-### INTRO
-- Let's practice how to control the System UI by referring to the [Android documentation](https://developer.android.com/training/system-ui).
-- **Overview** : https://www.youtube.com/watch?v=cBi8fjv90E4
+<h1 align="center">Control the System UI Visibility:penguin:</h1>
 
+Let's practice how to control the System UI by referring to the 
+  [Android documentation](https://developer.android.com/training/system-ui).
+- **Overview** : https://www.youtube.com/watch?v=cBi8fjv90E4 
 <br/>
 
-### INDEX
+INDEX
+-----
 - Dimming the System Bars
 - Hiding the Status Bar
 - Hiding the Navigation Bar
@@ -13,12 +14,13 @@
 
 <br/>
 
-### 1. Dimming the System Bars
+## 1. Dimming the System Bars
+
 ![Dimming the System bars](https://user-images.githubusercontent.com/25583321/72768168-d2766b80-3c39-11ea-8a34-9b35e3a3938f.gif)
 
 <br/>
 
-### 2. Hiding the Status Bar
+## 2. Hiding the Status Bar
 - version 4.0 and Lower<br/>
 ![Hide The Status Bar (LOW)](https://user-images.githubusercontent.com/25583321/72768422-c63ede00-3c3a-11ea-9346-7cc2b7422556.gif)
 
@@ -29,7 +31,7 @@
 
 <br/>
 
-### 3. Hiding the Navigation Bar
+## 3. Hiding the Navigation Bar
 - only navigation<br/>
 ![Hide The Navigation Bar](https://user-images.githubusercontent.com/25583321/72768382-95f73f80-3c3a-11ea-96ad-a9a4598c7426.gif)
 
@@ -41,8 +43,8 @@ This works the same as [Lean Back](https://developer.android.com/training/system
 
 <br/>
 
-### 4. Using Immersive Full-Screen Mode
-- [Lean Back](https://developer.android.com/training/system-ui/immersive.html#leanback) <br/>
+## 4. Using Immersive Full-Screen Mode
+### [Lean Back](https://developer.android.com/training/system-ui/immersive.html#leanback) <br/>
 ![Immersive_Leanback](https://user-images.githubusercontent.com/25583321/72768522-000fe480-3c3b-11ea-9887-0f8c2490e59f.gif)
 
 <br/>
