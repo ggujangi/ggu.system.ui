@@ -1,9 +1,4 @@
 # Control the System UI Visibility:penguin:
-
-<img src="https://user-images.githubusercontent.com/25583321/72777149-006aa880-3c58-11ea-887c-a4ce418663b6.png" width="228px" height="480px"></img>
-
-<br/>
-
 ### INTRO
 - Let's practice how to control the System UI by referring to the [Android documentation](https://developer.android.com/training/system-ui).
 - **Overview** : https://www.youtube.com/watch?v=cBi8fjv90E4
