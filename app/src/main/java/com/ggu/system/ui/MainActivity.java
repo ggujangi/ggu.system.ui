@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnImmersive.setOnClickListener(this);
         btnImmersiveLeanBack.setOnClickListener(this);
         btnImmersiveSticky.setOnClickListener(this);
-
     }
 
     @Override
