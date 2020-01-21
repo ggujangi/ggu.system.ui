@@ -17,7 +17,17 @@ INDEX
 ## 1. Dimming the System Bars
 
 ![Dimming the System bars](https://user-images.githubusercontent.com/25583321/72768168-d2766b80-3c39-11ea-8a34-9b35e3a3938f.gif)
-
+```Java
+if(mOption == View.SYSTEM_UI_FLAG_LOW_PROFILE){
+  mOption = SYSTEM_UI_FLAG_VISIBLE;
+  Toast.makeText(MainActivity.this, "다시 보입니다.", Toast.LENGTH_SHORT).show();
+}
+else{
+  mOption = View.SYSTEM_UI_FLAG_LOW_PROFILE;
+  Toast.makeText(MainActivity.this, "흐려집니다.", Toast.LENGTH_SHORT).show();
+}
+mDecorView.setSystemUiVisibility(mOption);
+```
 <br/>
 
 ## 2. Hiding the Status Bar
