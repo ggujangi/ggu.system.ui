@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import static android.view.View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
 import static android.view.View.SYSTEM_UI_FLAG_VISIBLE;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -79,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 mDecorView.setSystemUiVisibility(mOption);
                 break;
+
             case R.id.btn_hiding_status_high:
                 if(mOption == (View.SYSTEM_UI_FLAG_FULLSCREEN)){
                     mOption = SYSTEM_UI_FLAG_VISIBLE;
@@ -90,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 mDecorView.setSystemUiVisibility(mOption);
                 break;
+
             case R.id.btn_hiding_status_low:
                 if(isFullScreen) {
                     getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -101,8 +104,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     isFullScreen = true;
                 }
                 break;
+
             case R.id.btn_hiding_navigation:
+                // (Both)
+                // mOption = SYSTEM_UI_FLAG_HIDE_NAVIGATION|View.SYSTEM_UI_FLAG_FULLSCREEN;
+                mOption = SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+                mDecorView.setSystemUiVisibility(mOption);
                 break;
+
             case R.id.btn_immersive_lean_back:
                 break;
             case R.id.btn_immersive:
