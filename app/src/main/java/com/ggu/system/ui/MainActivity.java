@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onSystemUiVisibilityChange(int visibility) {
                 if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0){
+                    mOption = SYSTEM_UI_FLAG_VISIBLE;
 //                    Toast.makeText(MainActivity.this, "Not FullScreen", Toast.LENGTH_SHORT).show();
                     Log.d("SystemUiTest", "Not FullScreen");
                 }
@@ -77,6 +78,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mDecorView.setSystemUiVisibility(mOption);
                 break;
             case R.id.btn_hiding_status_high:
+                if(mOption == (View.SYSTEM_UI_FLAG_FULLSCREEN)){
+                    mOption = SYSTEM_UI_FLAG_VISIBLE;
+                    Toast.makeText(MainActivity.this, "Full Screen X.", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
+                    Toast.makeText(MainActivity.this, "Full Screen O.", Toast.LENGTH_SHORT).show();
+                }
+                mDecorView.setSystemUiVisibility(mOption);
                 break;
             case R.id.btn_hiding_status_low:
                 break;
