@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import static android.view.View.SYSTEM_UI_FLAG_VISIBLE;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     LinearLayout containerLayout;
@@ -13,11 +16,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btnDimming, btnHidingStatusBarLow, btnHidingStatusBarHigh, btnHidingNavigation;
     Button btnImmersive, btnImmersiveSticky, btnImmersiveLeanBack;
 
+    View mDecorView;
+
+    int mOption = SYSTEM_UI_FLAG_VISIBLE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mDecorView = getWindow().getDecorView();
+
         containerLayout = findViewById(R.id.ll_container);
 
         btnDimming = findViewById(R.id.btn_dimming);
@@ -35,6 +44,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnImmersive.setOnClickListener(this);
         btnImmersiveLeanBack.setOnClickListener(this);
         btnImmersiveSticky.setOnClickListener(this);
+
+        mDecorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int visibility) {
+                if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0){
+                    Toast.makeText(MainActivity.this, "Not FullScreen", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(MainActivity.this, "FullScreen", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     @Override
