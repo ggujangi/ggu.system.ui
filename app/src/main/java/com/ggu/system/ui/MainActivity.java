@@ -151,6 +151,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.btn_immersive_lean_back:
+                mOption = View.SYSTEM_UI_FLAG_FULLSCREEN
+                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+                mDecorView.setSystemUiVisibility(mOption);
                 break;
             case R.id.btn_immersive:
                 break;
