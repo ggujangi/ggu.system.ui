@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     View mDecorView;
 
     int mOption = SYSTEM_UI_FLAG_VISIBLE;
+    boolean isFullScreen = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onSystemUiVisibilityChange(int visibility) {
                 if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0){
+                    mOption = SYSTEM_UI_FLAG_VISIBLE;
 //                    Toast.makeText(MainActivity.this, "Not FullScreen", Toast.LENGTH_SHORT).show();
                     Log.d("SystemUiTest", "Not FullScreen");
                 }
@@ -77,8 +80,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mDecorView.setSystemUiVisibility(mOption);
                 break;
             case R.id.btn_hiding_status_high:
+                if(mOption == (View.SYSTEM_UI_FLAG_FULLSCREEN)){
+                    mOption = SYSTEM_UI_FLAG_VISIBLE;
+                    Toast.makeText(MainActivity.this, "Full Screen X.", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
+                    Toast.makeText(MainActivity.this, "Full Screen O.", Toast.LENGTH_SHORT).show();
+                }
+                mDecorView.setSystemUiVisibility(mOption);
                 break;
             case R.id.btn_hiding_status_low:
+                if(isFullScreen) {
+                    getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                    isFullScreen = false;
+                }
+                else{
+                    getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+                    isFullScreen = true;
+                }
                 break;
             case R.id.btn_hiding_navigation:
                 break;
