@@ -3,6 +3,7 @@ package com.ggu.system.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -49,10 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onSystemUiVisibilityChange(int visibility) {
                 if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0){
-                    Toast.makeText(MainActivity.this, "Not FullScreen", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MainActivity.this, "Not FullScreen", Toast.LENGTH_SHORT).show();
+                    Log.d("SystemUiTest", "Not FullScreen");
                 }
                 else{
-                    Toast.makeText(MainActivity.this, "FullScreen", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(MainActivity.this, "FullScreen", Toast.LENGTH_SHORT).show();
+                    Log.d("SystemUiTest", "FullScreen");
                 }
             }
         });
@@ -63,6 +66,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_dimming:
+                if(mOption == View.SYSTEM_UI_FLAG_LOW_PROFILE){
+                    mOption = SYSTEM_UI_FLAG_VISIBLE;
+                    Toast.makeText(MainActivity.this, "다시 보입니다.", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    mOption = View.SYSTEM_UI_FLAG_LOW_PROFILE;
+                    Toast.makeText(MainActivity.this, "흐려집니다.", Toast.LENGTH_SHORT).show();
+                }
+                mDecorView.setSystemUiVisibility(mOption);
                 break;
             case R.id.btn_hiding_status_high:
                 break;
