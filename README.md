@@ -19,8 +19,6 @@ INDEX
 <br/>
 
 ## 1. Dimming the System Bars
-
-![Dimming the System bars](https://user-images.githubusercontent.com/25583321/72768168-d2766b80-3c39-11ea-8a34-9b35e3a3938f.gif)
 ```Java
 if(mOption == View.SYSTEM_UI_FLAG_LOW_PROFILE){
   mOption = SYSTEM_UI_FLAG_VISIBLE;
@@ -32,6 +30,9 @@ else{
 }
 mDecorView.setSystemUiVisibility(mOption);
 ```
+
+![Dimming the System bars](https://user-images.githubusercontent.com/25583321/72768168-d2766b80-3c39-11ea-8a34-9b35e3a3938f.gif)
+
 <br/>
 
 ## 2. Hiding the Status Bar
