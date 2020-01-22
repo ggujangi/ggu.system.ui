@@ -1,6 +1,7 @@
 <h1 align="center">Control the System UI Visibility:penguin:</h1>
 
-<p align="center">Let's practice how to control the System UI by referring to the <b><a href="https://developer.android.com/training/system-ui">Android documentation</a></b></p>
+<p align="center">Let's practice how to control the System UI by referring to the 
+  <b><a href="https://developer.android.com/training/system-ui" target="_blank">Android documentation</a></b></p>
   
  
 
