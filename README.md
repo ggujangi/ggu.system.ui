@@ -2,7 +2,12 @@
 
 <p align="center">Let's practice how to control the System UI by referring to the 
   <b><a href="https://developer.android.com/training/system-ui" target="_blank">Android documentation</a></b></p>
-  
+
+<img src="https://user-images.githubusercontent.com/25583321/72859909-ad9cf980-3d08-11ea-9e4b-789d1dc164d2.PNG" align ="center" width="520px" height="292.5px" href="https://github.com/ggujangi/ggu.system.ui/files/4094927/System.UI.Visibility.ppt.pptx"/>
+<br/>
+
+[System UI Visibility.pptx](https://github.com/ggujangi/ggu.system.ui/files/4094927/System.UI.Visibility.ppt.pptx)
+
  
 
 - **Overview** : https://www.youtube.com/watch?v=cBi8fjv90E4 
