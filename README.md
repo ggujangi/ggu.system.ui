@@ -36,7 +36,7 @@ INDEX
 ### Reveal the Status and Navigation Bars
 - Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_VISIBLE` flag clears all flags
 
-### 🍮Code
+### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_LOW_PROFILE;
@@ -75,7 +75,7 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768445-d5259080-3c3a-11ea-95ca-a70c3f4d409c.gif"/>
 
-### 🍮Code
+### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -90,7 +90,7 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ![Hide The Navigation Bar](https://user-images.githubusercontent.com/25583321/72768382-95f73f80-3c3a-11ea-96ad-a9a4598c7426.gif)
 
-### 🍮Code
+### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
@@ -102,7 +102,7 @@ mDecorView.setSystemUiVisibility(mOption);
 ![Hiding the Navigation Bar both](https://user-images.githubusercontent.com/25583321/72768388-9ee81100-3c3a-11ea-849e-0b7929a68ba9.gif)<br/>
 This works the same as [Lean Back](https://developer.android.com/training/system-ui/immersive.html#leanback)
 
-### 🍮Code
+### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -117,7 +117,7 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ![Immersive_Leanback](https://user-images.githubusercontent.com/25583321/72768522-000fe480-3c3b-11ea-9887-0f8c2490e59f.gif)
 
-### 🍮Code
+### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
@@ -128,7 +128,7 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ![Immersive](https://user-images.githubusercontent.com/25583321/72768503-f2f2f580-3c3a-11ea-9b35-de79a33541cd.gif)
 
-### 🍮Code
+### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -141,6 +141,7 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ![Immersive_sticky](https://user-images.githubusercontent.com/25583321/72768530-0736f280-3c3b-11ea-9cef-45a2e6906915.gif)
 
+### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption =  View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
