@@ -25,13 +25,13 @@ INDEX
 
 ## 1. Dimming the System Bars
 
-![Dimming the System bars](https://user-images.githubusercontent.com/25583321/72768168-d2766b80-3c39-11ea-8a34-9b35e3a3938f.gif)
+<img align="right" src="https://user-images.githubusercontent.com/25583321/72768168-d2766b80-3c39-11ea-8a34-9b35e3a3938f.gif"/>
 
+### 
 ### 🍮Code
 ```Java
-int mOption = View.SYSTEM_UI_FLAG_VISIBLE; // Default Flag
-
-mOption = View.SYSTEM_UI_FLAG_LOW_PROFILE;
+View mDecorView = getActivity().getWindow().getDecorView();
+int mOption = View.SYSTEM_UI_FLAG_LOW_PROFILE;
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
@@ -54,9 +54,8 @@ getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 
 ### 🍮Code
 ```Java
-int mOption = View.SYSTEM_UI_FLAG_VISIBLE; // Default Flag
-
-mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
+View mDecorView = getActivity().getWindow().getDecorView();
+int mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
@@ -71,9 +70,8 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ### 🍮Code
 ```Java
-int mOption = View.SYSTEM_UI_FLAG_VISIBLE; // Default Flag
-
-mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+View mDecorView = getActivity().getWindow().getDecorView();
+int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
@@ -84,9 +82,8 @@ This works the same as [Lean Back](https://developer.android.com/training/system
 
 ### 🍮Code
 ```Java
-int mOption = View.SYSTEM_UI_FLAG_VISIBLE; // Default Flag
-
-mOption = SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN
+View mDecorView = getActivity().getWindow().getDecorView();
+int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
@@ -100,9 +97,8 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ### 🍮Code
 ```Java
-int mOption = View.SYSTEM_UI_FLAG_VISIBLE; // Default Flag
-
-mOption = SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN
+View mDecorView = getActivity().getWindow().getDecorView();
+int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
@@ -112,9 +108,8 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ### 🍮Code
 ```Java
-int mOption = View.SYSTEM_UI_FLAG_VISIBLE; // Default Flag
-
-mOption = View.SYSTEM_UI_FLAG_IMMERSIVE
+View mDecorView = getActivity().getWindow().getDecorView();
+int mOption = View.SYSTEM_UI_FLAG_IMMERSIVE
           | View.SYSTEM_UI_FLAG_FULLSCREEN
           | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
 mDecorView.setSystemUiVisibility(mOption);
@@ -125,9 +120,8 @@ mDecorView.setSystemUiVisibility(mOption);
 ![Immersive_sticky](https://user-images.githubusercontent.com/25583321/72768530-0736f280-3c3b-11ea-9cef-45a2e6906915.gif)
 
 ```Java
-int mOption = View.SYSTEM_UI_FLAG_VISIBLE; // Default Flag
-
-mOption = View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+View mDecorView = getActivity().getWindow().getDecorView();
+int mOption =  View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
           | View.SYSTEM_UI_FLAG_FULLSCREEN
           | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
 mDecorView.setSystemUiVisibility(mOption);
