@@ -63,11 +63,13 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 - #### Setting `WindowManager` flags
   - When you set `WindowManager` flags, the flags remain in effect unless your app clears them.
   - You can use `FLAG_LAYOUT_IN_SCREEN` to set your activity layout to use the same screen area that's available when you've enabled `FLAG_FULL_SCREEN`
+  <br/>
   
   ```Java
   getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
   ```
+  <br/>
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768445-d5259080-3c3a-11ea-95ca-a70c3f4d409c.gif"/>
 
 ### Hide the Status Bar on Android 4.1 and Higher
