@@ -47,10 +47,10 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 <br/>
 
 ## 2. Hiding the Status Bar
+### Hide the Status Bar on Android 4.0 and Lower
 
-- version 4.0 and Lower
+<img align="right" src="https://user-images.githubusercontent.com/25583321/72768422-c63ede00-3c3a-11ea-9346-7cc2b7422556.gif"/>
 
-![Hide The Status Bar (LOW)](https://user-images.githubusercontent.com/25583321/72768422-c63ede00-3c3a-11ea-9346-7cc2b7422556.gif)
 
 ### 🍮Code
 ```Java
@@ -59,9 +59,9 @@ getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 ```
 
 
-- version 4.1 and higher
+### Hide the Status Bar on Android 4.1 and Higher
 
-![Hide The Status Bar (HIGH)](https://user-images.githubusercontent.com/25583321/72768445-d5259080-3c3a-11ea-95ca-a70c3f4d409c.gif)
+<img align="right" src="https://user-images.githubusercontent.com/25583321/72768445-d5259080-3c3a-11ea-95ca-a70c3f4d409c.gif"/>
 
 ### 🍮Code
 ```Java
