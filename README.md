@@ -102,17 +102,6 @@ int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
-- navigation and status bar<br/>
-
-![Hiding the Navigation Bar both](https://user-images.githubusercontent.com/25583321/72768388-9ee81100-3c3a-11ea-849e-0b7929a68ba9.gif)<br/>
-This works the same as [Lean Back](https://developer.android.com/training/system-ui/immersive.html#leanback)
-
-### 🍮Sample
-```Java
-View mDecorView = getActivity().getWindow().getDecorView();
-int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
-mDecorView.setSystemUiVisibility(mOption);
-```
 <br/>
 
 ## 4. Using Immersive Full-Screen Mode
