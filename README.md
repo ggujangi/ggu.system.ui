@@ -61,7 +61,7 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
   </application>
   ```
 - #### Setting `WindowManager` flags
-  - When you set `WindowManager` flags, the flags remain in effect unless your app clears them.
+  - When you set `WindowManager` flags, the flags remain in effect unless your app clears them
   - You can use `FLAG_LAYOUT_IN_SCREEN` to set your activity layout to use the same screen area that's available when you've enabled `FLAG_FULL_SCREEN`
   <br/>
   
@@ -73,13 +73,17 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768445-d5259080-3c3a-11ea-95ca-a70c3f4d409c.gif"/>
 
 ### Hide the Status Bar on Android 4.1 and Higher
-
-### 🍮Sample
-```Java
-View mDecorView = getActivity().getWindow().getDecorView();
-int mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
-mDecorView.setSystemUiVisibility(mOption);
-```
+- #### Setting UI Flags
+  - Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_FULLSCREEN` flag hides the status bar
+  <br/>
+  
+  ```Java
+  View mDecorView = getActivity().getWindow().getDecorView();
+  int mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
+  mDecorView.setSystemUiVisibility(mOption);
+  ```
+- #### Responding to UI Visibility Changes
+  - When the user reopens the activity, `onCreate()` won't get called, so if you want system UI changes to persist, set UI flags in `onResume()` of `onWindowFocusChanged()`
 
 <br/>
 
@@ -107,7 +111,6 @@ View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
 mDecorView.setSystemUiVisibility(mOption);
 ```
-
 <br/>
 
 ## 4. Using Immersive Full-Screen Mode
