@@ -83,7 +83,9 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
   mDecorView.setSystemUiVisibility(mOption);
   ```
 - #### Responding to UI Visibility Changes
+  - Once UI flags have been cleared, your app needs to reset them if you want to hide the bars again. 
   - When the user reopens the activity, `onCreate()` won't get called, so if you want system UI changes to persist, set UI flags in `onResume()` of `onWindowFocusChanged()`
+  - The method setSystemUiVisibility() only has an effect if the view you call it from is visible.
 
 <br/>
 
