@@ -53,8 +53,8 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 ### Hide the Status Bar on Android 4.0 and Lower
 
 - #### Setting an activity theme
-  It's easier to maintain and less error-prone <br/>
-  It results in smoother UI transitions
+  - It's easier to maintain and less error-prone <br/>
+  - It results in smoother UI transitions
   ``` xml
   <application
     ...
@@ -63,8 +63,8 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
   </application>
   ```
 - #### Setting `WindowManager` flags
-  When you set `WindowManager` flags, the flags remain in effect unless your app clears them. <br/>
-  You can use `FLAG_LAYOUT_IN_SCREEN` to set your activity layout to use the same screen area that's available when you've enabled 
+  - When you set `WindowManager` flags, the flags remain in effect unless your app clears them.
+  - You can use `FLAG_LAYOUT_IN_SCREEN` to set your activity layout to use the same screen area that's available when you've enabled 
   
   ```Java
   getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
