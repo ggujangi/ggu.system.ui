@@ -28,13 +28,23 @@ INDEX
 
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768168-d2766b80-3c39-11ea-8a34-9b35e3a3938f.gif"/>
 
-### 
+### Dim the Status and Navigation Bars
+- Available in Android 4.0 (API level 14) and higher
+- You can dim the status and notification bars using the `SYSTEM_UI_FLAG_LOW_PROFILE` flag.
+- As soon as the user touches the status or navigation bar, the flag is cleared.
+
+### Reveal the Status and Navigation Bars
+- Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_VISIBLE` flag clears all flags.
+
 ### 🍮Code
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_LOW_PROFILE;
 mDecorView.setSystemUiVisibility(mOption);
+// clear all flags
+mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 ```
+<br/>
 
 ## 2. Hiding the Status Bar
 
@@ -59,7 +69,6 @@ View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_FULLSCREEN;
 mDecorView.setSystemUiVisibility(mOption);
 ```
-
 
 <br/>
 
