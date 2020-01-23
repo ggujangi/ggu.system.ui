@@ -89,9 +89,9 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 
 ## 3. Hiding the Navigation Bar
 
-- only navigation
+<img align="right" src="https://user-images.githubusercontent.com/25583321/72768382-95f73f80-3c3a-11ea-96ad-a9a4598c7426.gif"/>
 
-![Hide The Navigation Bar](https://user-images.githubusercontent.com/25583321/72768382-95f73f80-3c3a-11ea-96ad-a9a4598c7426.gif)
+### Dim the Status and Navigation Bars
 
 ### 🍮Sample
 ```Java
