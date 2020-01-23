@@ -47,9 +47,10 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 <br/>
 
 ## 2. Hiding the Status Bar
-### Hide the Status Bar on Android 4.0 and Lower
 
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768422-c63ede00-3c3a-11ea-9346-7cc2b7422556.gif"/>
+
+### Hide the Status Bar on Android 4.0 and Lower
 
 - #### Setting an activity theme
   It's easier to maintain and less error-prone
