@@ -54,29 +54,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnImmersiveLeanBack.setOnClickListener(this);
         btnImmersiveSticky.setOnClickListener(this);
 
-        scrollView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                gestureDetector.onTouchEvent(event);
-                return true;
-            }
-        });
+//        scrollView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                gestureDetector.onTouchEvent(event);
+//                return true;
+//            }
+//        });
 
         mDecorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
             @Override
             public void onSystemUiVisibilityChange(int visibility) {
                 if((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0){
                     mOption = SYSTEM_UI_FLAG_VISIBLE;
-//                    Toast.makeText(MainActivity.this, "Not FullScreen", Toast.LENGTH_SHORT).show();
                     Log.d("SystemUiTest", "Not FullScreen");
                 }
                 else{
-//                    Toast.makeText(MainActivity.this, "FullScreen", Toast.LENGTH_SHORT).show();
                     Log.d("SystemUiTest", "FullScreen");
                 }
             }
         });
-
+/*
         gestureDetector = new GestureDetector(this, new GestureDetector.OnGestureListener() {
             @Override
             public boolean onDown(MotionEvent e) {
@@ -100,12 +98,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) { return false; }
-        });
+        });*/
 
     }
 
     @Override
     public void onClick(View v) {
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
+
         switch (v.getId()){
             case R.id.btn_dimming:
                 if(mOption == View.SYSTEM_UI_FLAG_LOW_PROFILE){
