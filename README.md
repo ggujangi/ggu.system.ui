@@ -36,7 +36,6 @@ INDEX
 ### Reveal the Status and Navigation Bars
 - Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_VISIBLE` flag clears all flags
 
-### 🍮Sample
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_LOW_PROFILE;
@@ -44,7 +43,7 @@ mDecorView.setSystemUiVisibility(mOption);
 // clear all flags
 mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 ```
-<br/>
+<br/><br/>
 
 ## 2. Hiding the Status Bar
 
