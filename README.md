@@ -126,9 +126,9 @@ mDecorView.setSystemUiVisibility(mOption);
 
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768382-95f73f80-3c3a-11ea-96ad-a9a4598c7426.gif"/>
 
-- The lean back mode is for fullscreen experiences in which users won't be interacting heavily with the screen
+- The **lean back** mode is for fullscreen experiences in which users won't be interacting heavily with the screen
 - For example, watching a video.
-- When the user taps anywhere on the screen, the status bar appears
+- When the user taps anywhere on the screen, the system bar appears
 - Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_FULLSCREEN` and `SYSTEM_UI_FLAG_HIDE_NAVIGATION`
 - When the system bars re-appear, you can receive a callback to make other appropriate updates to your UI
 
@@ -139,16 +139,16 @@ int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
-<br/><br/><br/>
+<br/><br/><br/><br/>
 
 ### [Immersive](https://developer.android.com/training/system-ui/immersive.html#immersive)
 
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768503-f2f2f580-3c3a-11ea-9b35-de79a33541cd.gif"/>
 
-- The lean back mode is for fullscreen experiences in which users won't be interacting heavily with the screen
-- For example, watching a video.
-- When the user taps anywhere on the screen, the status bar appears
-- Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_FULLSCREEN` and `SYSTEM_UI_FLAG_HIDE_NAVIGATION`
+- The **immersive** mode is intended for apps in which user will be heavily interacting with the screen
+- For example, games, viewing images in a gallery, or reading paginated content
+- When user wipe from any edge where a system bar is hidden, the system bar appears.
+- Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_IMMERSIVE` and `SYSTEM_UI_FLAG_FULLSCREEN`, `SYSTEM_UI_FLAG_HIDE_NAVIGATION`
 - When the system bars re-appear, you can receive a callback to make other appropriate updates to your UI
 
 ```Java
@@ -159,7 +159,7 @@ int mOption = View.SYSTEM_UI_FLAG_IMMERSIVE
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
-<br/><br/><br/>
+<br/><br/>
 
 ### [Sticky Immersive](https://developer.android.com/training/system-ui/immersive.html#sticky-immersive)
 
