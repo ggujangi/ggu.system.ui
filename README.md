@@ -134,15 +134,23 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
-int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
+int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+          | View.SYSTEM_UI_FLAG_FULLSCREEN;
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
-- [Immersive](https://developer.android.com/training/system-ui/immersive.html#immersive)
+<br/><br/><br/>
 
-![Immersive](https://user-images.githubusercontent.com/25583321/72768503-f2f2f580-3c3a-11ea-9b35-de79a33541cd.gif)
+### [Immersive](https://developer.android.com/training/system-ui/immersive.html#immersive)
 
-### 🍮Sample
+<img align="right" src="https://user-images.githubusercontent.com/25583321/72768503-f2f2f580-3c3a-11ea-9b35-de79a33541cd.gif"/>
+
+- The lean back mode is for fullscreen experiences in which users won't be interacting heavily with the screen
+- For example, watching a video.
+- When the user taps anywhere on the screen, the status bar appears
+- Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_FULLSCREEN` and `SYSTEM_UI_FLAG_HIDE_NAVIGATION`
+- When the system bars re-appear, you can receive a callback to make other appropriate updates to your UI
+
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_IMMERSIVE
@@ -151,11 +159,12 @@ int mOption = View.SYSTEM_UI_FLAG_IMMERSIVE
 mDecorView.setSystemUiVisibility(mOption);
 ```
 
-- [Sticky Immersive](https://developer.android.com/training/system-ui/immersive.html#sticky-immersive)
+<br/><br/><br/>
 
-![Immersive_sticky](https://user-images.githubusercontent.com/25583321/72768530-0736f280-3c3b-11ea-9cef-45a2e6906915.gif)
+### [Sticky Immersive](https://developer.android.com/training/system-ui/immersive.html#sticky-immersive)
 
-### 🍮Sample
+<img align="right" src="https://user-images.githubusercontent.com/25583321/72768530-0736f280-3c3b-11ea-9cef-45a2e6906915.gif"/>
+
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption =  View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
@@ -163,4 +172,6 @@ int mOption =  View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
           | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
 mDecorView.setSystemUiVisibility(mOption);
 ```
+
+<br/><br/><br/>
 
