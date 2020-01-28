@@ -9,6 +9,26 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:padding="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"/>
+            <TextView
+                android:id="@+id/textView_change_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="change the color"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="@android:color/holo_blue_light"/>
+        </FrameLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
