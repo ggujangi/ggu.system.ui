@@ -91,7 +91,9 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 - Available in Android 4.1 (API level 16) and higher
 - If you use `SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION`, the content will not be resized when the navigation bar is hidden and visible.
 - `SYSTEM_UI_FLAG_LAYOUT_STABLE` helps your app maintain a stable layout.
-<br/><br/><br/><br/>
+- `android:fitsSystemWindows` adjusts the padding of the parent `ViewGroup` and if set to true the app's UI will not be covered by the system bar
+
+<br/><br/>
 
 ## 3. Hiding the Navigation Bar
 
