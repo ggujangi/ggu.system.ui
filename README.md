@@ -69,7 +69,7 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
   getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                         WindowManager.LayoutParams.FLAG_FULLSCREEN);
 ```
-  <br/>
+ 
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768445-d5259080-3c3a-11ea-95ca-a70c3f4d409c.gif"/>
 
 ### Hide the Status Bar on Android 4.1 and Higher
@@ -83,7 +83,11 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 ```
 - #### Responding to UI Visibility Changes
   - When the user reopens the activity, `onCreate()` won't get called, so if you want system UI changes to persist, set UI flags in `onResume()` of `onWindowFocusChanged()`
-
+  
+### Make Content Appear Behind the Status Bar
+- Available in Android 4.1 (API level 16) and higher
+- If you use `SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION`, the content will not be resized when the navigation bar is hidden and visible.
+- `SYSTEM_UI_FLAG_LAYOUT_STABLE` helps your app maintain a stable layout.
 <br/><br/><br/><br/>
 
 ## 3. Hiding the Navigation Bar
