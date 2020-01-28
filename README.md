@@ -87,6 +87,8 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 - #### Responding to UI Visibility Changes
   - When the user reopens the activity, `onCreate()` won't get called, so if you want system UI changes to persist, set UI flags in `onResume()` of `onWindowFocusChanged()`
   
+<br/>
+
 ### Make Content Appear Behind the Status Bar
 - Available in Android 4.1 (API level 16) and higher
 - If you use `SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION`, the content will not be resized when the navigation bar is hidden and visible.
@@ -101,7 +103,7 @@ mDecorView.setSystemUiVisibility(SYSTEM_UI_FLAG_VISIBLE);
 
 ### Hide the Navigation Bar
 - Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_HIDE_NAVIGATION` flag hides the navigation bar
-- You can also hide the status bar by using the `SYSTEM_UI_FLAG_FULLSCREEN` flag together. 
+- You can also hide the status bar by using the `SYSTEM_UI_FLAG_FULLSCREEN` flag together. This works the same as `Lean back` in Full screen Options
 
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
@@ -114,17 +116,22 @@ mDecorView.setSystemUiVisibility(mOption);
 
 ### Make Content Appear Behind the Navigation Bar
 - Available in Android 4.1 (API level 16) and higher
-- If you use `SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION`, the content will not be resized when the navigation bar is hidden and visible.
-- `SYSTEM_UI_FLAG_LAYOUT_STABLE` helps your app maintain a stable layout.
+- If you use `SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION`, the content will not be resized when the navigation bar is hidden and visible
+- `SYSTEM_UI_FLAG_LAYOUT_STABLE` helps your app maintain a stable layout
 <br/>
 
 ## 4. Using Immersive Full-Screen Mode
 
-- [Lean Back](https://developer.android.com/training/system-ui/immersive.html#leanback)
+### [Lean Back](https://developer.android.com/training/system-ui/immersive.html#leanback)
 
-![Immersive_Leanback](https://user-images.githubusercontent.com/25583321/72768522-000fe480-3c3b-11ea-9887-0f8c2490e59f.gif)
+<img align="right" src="https://user-images.githubusercontent.com/25583321/72768382-95f73f80-3c3a-11ea-96ad-a9a4598c7426.gif"/>
 
-### 🍮Sample
+- The lean back mode is for fullscreen experiences in which users won't be interacting heavily with the screen
+- For example, watching a video.
+- When the user taps anywhere on the screen, the status bar appears
+- Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_FULLSCREEN` and `SYSTEM_UI_FLAG_HIDE_NAVIGATION`
+- When the system bars re-appear, you can receive a callback to make other appropriate updates to your UI
+
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
 int mOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
