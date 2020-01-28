@@ -147,7 +147,7 @@ mDecorView.setSystemUiVisibility(mOption);
 
 - The **immersive** mode is intended for apps in which user will be heavily interacting with the screen
 - For example, games, viewing images in a gallery, or reading paginated content
-- When user wipe from any edge where a system bar is hidden, the system bar appears.
+- When user wipe from any edge where a system bar is hidden, the system bar appears
 - Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_IMMERSIVE` and `SYSTEM_UI_FLAG_FULLSCREEN`, `SYSTEM_UI_FLAG_HIDE_NAVIGATION`
 - When the system bars re-appear, you can receive a callback to make other appropriate updates to your UI
 
@@ -164,6 +164,11 @@ mDecorView.setSystemUiVisibility(mOption);
 ### [Sticky Immersive](https://developer.android.com/training/system-ui/immersive.html#sticky-immersive)
 
 <img align="right" src="https://user-images.githubusercontent.com/25583321/72768530-0736f280-3c3b-11ea-9cef-45a2e6906915.gif"/>
+
+- The **sticky immersive** mode
+- For example, drawing app, playing a game that requires lots of swiping
+- Calling `setSystemUiVisibility()` with `SYSTEM_UI_FLAG_IMMERSIVE_STICKY` and `SYSTEM_UI_FLAG_FULLSCREEN`, `SYSTEM_UI_FLAG_HIDE_NAVIGATION`
+- With sticky immersive, You cannot receive a callback when the system UI visibility changes
 
 ```Java
 View mDecorView = getActivity().getWindow().getDecorView();
