@@ -102,6 +102,11 @@ int bothOption = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
               | View.SYSTEM_UI_FLAG_FULLSCREEN;
 mDecorView.setSystemUiVisibility(mOption);
 ```
+
+### Make Content Appear Behind the Navigation Bar
+- Available in Android 4.1 (API level 14) and higher
+- If you use `SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION`, the content will not be resized when the navigation bar is hidden and visible.
+- `SYSTEM_UI_FLAG_LAYOUT_STABLE` helps your app maintain a stable layout.
 <br/>
 
 ## 4. Using Immersive Full-Screen Mode
